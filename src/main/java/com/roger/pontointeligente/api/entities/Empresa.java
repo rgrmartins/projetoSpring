@@ -21,7 +21,7 @@ import javax.persistence.Table;
 @Table(name = "empresa")
 public class Empresa implements Serializable{
 
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = -4649408203257382481L;
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
@@ -36,7 +36,7 @@ public class Empresa implements Serializable{
 	@Column(name = "data_criacao", nullable = false)
 	private	Date dataCriacao;
 	
-	@Column(name = "data_ataulizacao", nullable = false)
+	@Column(name = "data_atualizacao", nullable = false)
 	private	Date dataAtualizacao;
 	
 	@OneToMany(mappedBy = "empresa", fetch = FetchType.LAZY, cascade = CascadeType.ALL)

@@ -28,8 +28,8 @@ import com.roger.pontointeligente.api.enums.PerfilEnum;
 @Table(name = "funcionario")
 public class Funcionario implements Serializable{
 
-	private static final long serialVersionUID = 1L;
-	
+	private static final long serialVersionUID = -4258969892943135948L;
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
@@ -159,7 +159,7 @@ public class Funcionario implements Serializable{
 	}
 	
 	@Transient
-	public Optional<Float> getQtdHorasalmocoDiaOpt(){
+	public Optional<Float> getQtdHorasalmocoOpt(){
 		return Optional.ofNullable(qtdHorasAlmoco);
 	}
 

@@ -60,6 +60,7 @@
 		<dependency>
 			<groupId> org.flywaydb </groupId>
 			<artifactId> flyway-core </artifactId>
+			<version>4.2.0</version>
 			</dependency>
 
 		<!-- Spring Security -->
@@ -84,6 +85,13 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		
+		<!-- dependência para que as requisições http suporte o tipo de dado Optional -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.datatype</groupId>
+			<artifactId>jackson-datatype-jdk8</artifactId>
+		</dependency>
+		
 
 	</dependencies>
 

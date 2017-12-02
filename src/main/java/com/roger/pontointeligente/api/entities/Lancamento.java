@@ -24,8 +24,8 @@ import com.roger.pontointeligente.api.enums.TipoEnum;
 @Table(name = "lancamento")
 public class Lancamento implements Serializable{
 
-	private static final long serialVersionUID = 1L;
-	
+	private static final long serialVersionUID = 1780925154963800046L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;

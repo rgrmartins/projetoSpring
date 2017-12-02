@@ -59,11 +59,11 @@ public class CadastroPJController {
 		Empresa empresa = this.converterDtoParaEmpresa(cadastroPJDto);
 		Funcionario funcionario = this.converterDtoParaFuncionario(cadastroPJDto, result);
 		
-		//verifica se existe erros
+		//verifica se existe erros de validação
 		if (result.hasErrors()) {
 			log.error("Erro validando dados de Cadastro de PJ: {}", result.getAllErrors());
 			result.getAllErrors().forEach(error -> response.getErrors().add(error.getDefaultMessage()));
-			return ResponseEntity.badRequest().body(response);
+			return ResponseEntity.badRequest().body(response); // retorna o erro 400 no http
 		}
 		
 		this.empresaService.persistir(empresa);
@@ -117,7 +117,7 @@ public class CadastroPJController {
 		funcionario.setNome(cadastroPJDto.getNome());
 		funcionario.setEmail(cadastroPJDto.getEmail());
 		funcionario.setCpf(cadastroPJDto.getCpf());
-		funcionario.setPerfil(PerfilEnum.ROLE_ADMIN); // como é pessoa Jurídica porntanto proprietário da empresa
+		funcionario.setPerfil(PerfilEnum.ROLE_ADMIN); // como é pessoa Jurídica portanto proprietário da empresa
 		funcionario.setSenha(PasswordUtils.gerarBCrypt(cadastroPJDto.getSenha()));
 		
 		return funcionario;
