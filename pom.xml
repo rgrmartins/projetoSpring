@@ -61,7 +61,7 @@
 			<groupId> org.flywaydb </groupId>
 			<artifactId> flyway-core </artifactId>
 			<version>4.2.0</version>
-			</dependency>
+		</dependency>
 
 		<!-- Spring Security -->
 		<dependency>
@@ -69,29 +69,42 @@
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
 
+		<!-- JWT Token -->
+		<dependency>
+			<groupId> io.jsonwebtoken </groupId>
+			<artifactId> jjwt </artifactId>
+			<version> 0.7.0 </version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-test</artifactId>
 		</dependency>
-		
+
 		<!-- Hibernate Validator -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-validation</artifactId>
 		</dependency>
-		
+
 		<!-- web -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		
+
 		<!-- dependência para que as requisições http suporte o tipo de dado Optional -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.datatype</groupId>
 			<artifactId>jackson-datatype-jdk8</artifactId>
 		</dependency>
-		
+
+		<!-- Manipulação de Enuns -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.6</version>
+		</dependency>
 
 	</dependencies>
 
